@@ -3,20 +3,46 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Videointeractivo</title>
+    <title>Unity WebGL Player | JuegosAlcadiadeTunja</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
+
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/demotunja.json", {onProgress: UnityProgress});
-    </script>
-  </head>
-  <body>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 1400px; height: 768px"></div>
-      <div class="footer">
-      </div>
-    </div>
-  </body>
-</html>
+
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/demotunja.json", {onProgress: UnityProgress});
+       function Reset() 
+         {
+            var canvas = document.getElementById("#canvas"); 
+            canvas.height= document.documentElement.clientHeight;
+            canvas.width = document.documentElement.clientWidth; 
+         }
+        function ShowObj() // Emprender Unity
+         {
+             var PC = IsPC();
+             gameInstance.SendMessage("ShowManager", "GetInformation",PC+'_'+1); // Los parámetros a su vez son: el objeto del script montado en la escena, el método de interacción con html en el script, los parámetros que deben pasarse.
+         }   
+        function IsPC() // Juzgar el método de ejecución de la plataforma
+        {
+             var userAgentInfo = navigator.userAgent;
+             var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+             var flag = true;
+             for (var v = 0; v < Agents.length; v++)
+             {
+                if (userAgentInfo.indexOf(Agents[v]) > 0)
+                {
+                    flag = false;
+                    break;
+                }
+             }
+             return flag;
+                      }     
+       </script>
+     </head>
+     <body onload="Reset()" onresize="Reset()">
+         <div class="webgl-content"style="width: 1400; height: 768" >
+         <div id="gameContainer" style="width: 1400; height: 768"></div>
+       </div>
+     </body>
+   </html>
