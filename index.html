@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
-    <IfModule mod_mime.c>
-      AddEncoding gzip .unityweb
-    </IfModule>
+    <script >
+      function openwin(url) {
+        window.open (url, "newwindow", "height=9999, width=9999, top=200,left=200 toolbar =no, menubar=no, scrollbars=no, resizable=no, location=no, status=no");
+      }
+    </script>
 
     <script>
 
@@ -44,8 +46,8 @@
        </script>
      </head>
      <body onload="Reset()" onresize="Reset()">
-         <div class="webgl-content"style="width: 2040; height: 1147" >
-         <div id="gameContainer" style="width: 2040; height: 1147"></div>
+         <div class="webgl-content"style="width: 3840; height: 2160" >
+         <div id="gameContainer" style="width: 3840; height: 2160"></div>
        </div>
      </body>
    </html>
