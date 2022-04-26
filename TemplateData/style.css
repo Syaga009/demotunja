@@ -16,3 +16,65 @@
 .webgl-content .footer .webgl-logo {background-image: url('webgl-logo.png'); width: 204px; float: left;}
 .webgl-content .footer .title {margin-right: 10px; float: right;}
 .webgl-content .footer .fullscreen {background-image: url('fullscreen.png'); width: 38px; float: right;}
+body {
+    margin: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+   .app {
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    padding: 40px;
+    text-align: center;
+  }
+
+ 
+  @media screen and (orientation: portrait) {
+    .mensaje {
+        font-family:sans-serif;
+      position: fixed;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+      background-color: #00a3fd;
+        color: white;
+      z-index: 1000;
+    }
+      .circle {
+          background: #fff;
+          width: 60px;
+          height: 60px;
+
+          position: fixed;
+          z-index: 1000;
+
+          border-radius: 50px;
+          margin-top: 80vh;
+
+      }
+      .mensaje img {
+          max-width: 60px;
+      }
+
+      .mensaje .logo {
+          max-width: 75vw;
+      }
+
+
+
+
+    .app {
+      display: none;
+    }
+  }
