@@ -23,7 +23,9 @@ body {
     height: 100vh;
 }
 
- 
+ 	.mensaje{
+ 		display: none;
+ 	}
   @media screen and (orientation: portrait) {
     .mensaje {
         font-family:sans-serif;
@@ -39,10 +41,8 @@ body {
       justify-content: center;
 
 
-      background-color: #FFFFFF;
+      background-color: #ffffff;
+        color: white;
       z-index: 1000;
     }
-      .mensaje img {
-          max-width: 100%;
-      }
   }

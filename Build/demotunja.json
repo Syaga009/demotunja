@@ -1,7 +1,7 @@
 {
 "companyName": "Adn_Traing",
 "productName": "Videointeractivo",
-"productVersion": "0.3",
+"productVersion": "0.4",
 "dataUrl": "demotunja.data.unityweb",
 "wasmCodeUrl": "demotunja.wasm.code.unityweb",
 "wasmFrameworkUrl": "demotunja.wasm.framework.unityweb",
