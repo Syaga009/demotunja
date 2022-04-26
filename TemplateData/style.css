@@ -23,14 +23,6 @@ body {
     height: 100vh;
 }
 
-   .app {
-    background-color: black;
-    color: white;
-    font-size: 2rem;
-    padding: 40px;
-    text-align: center;
-  }
-
  
   @media screen and (orientation: portrait) {
     .mensaje {
@@ -47,34 +39,10 @@ body {
       justify-content: center;
 
 
-      background-color: #00a3fd;
-        color: white;
+      background-color: #FFFFFF;
       z-index: 1000;
     }
-      .circle {
-          background: #fff;
-          width: 60px;
-          height: 60px;
-
-          position: fixed;
-          z-index: 1000;
-
-          border-radius: 50px;
-          margin-top: 80vh;
-
-      }
       .mensaje img {
-          max-width: 60px;
+          max-width: 100%;
       }
-
-      .mensaje .logo {
-          max-width: 75vw;
-      }
-
-
-
-
-    .app {
-      display: none;
-    }
   }
